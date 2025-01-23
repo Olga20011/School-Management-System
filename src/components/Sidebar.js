@@ -76,7 +76,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               basePath="/students"
             >
               <SidebarItem
-                path="/school-admission"
+                path="/class-list"
                 iconClass="pe-7s-less nav-icon"
                 label="Enrollment/Admission"
               />
@@ -212,7 +212,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             <SidebarItem
               path="/settings"
               iconClass="fa fa-cog"
-              label="Settings"
+              label=" System Settings"
             />
           </ul>
         </div>

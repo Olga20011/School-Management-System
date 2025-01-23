@@ -8,7 +8,11 @@ const ClassList = () => {
   return (
     <PageContainer>
       <MainContent>
-        <PageTitle title="Class Lists" description="" />
+        <PageTitle
+          title="Class Lists"
+          description="Organised list of all students according to their classes"
+          iconClass="fa fa-clipboard"
+        />
         <StudentList />
       </MainContent>
     </PageContainer>

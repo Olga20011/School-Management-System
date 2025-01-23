@@ -1,0 +1,128 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .login-container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+  }
+  
+  .left-panel {
+    background-color: #1d176b;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .left-panel h3 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
+  .left-panel p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .login-form {
+    padding: 2rem 4rem;
+  }
+  
+  .login-form h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .login-form p {
+    color: #6c757d;
+    font-size: 14px;
+  }
+  
+  .login-form .form-control {
+    margin-bottom: 1rem;
+    border-radius: 25px;
+  }
+  
+  .login-form .btn-primary {
+    border-radius: 25px;
+    width: 100%;
+  }
+  
+  .google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f1f1;
+    border-radius: 25px;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+  }
+  
+  .google-login img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  .or-divider {
+    text-align: center;
+    margin-top: 20px;
+    color: #6c757d;
+  }
+  
+  .signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .password-icon {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .left-panel h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .left-panel h2 span {
+    color: #FFC107; /* Highlight YEXP */
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .feature-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #FFC107;
+  }
+  
+  .feature-list strong {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .feature-list p {
+    margin: 0;
+    color: #d9d9d9;
+    font-size: 14px;
+  }
+  

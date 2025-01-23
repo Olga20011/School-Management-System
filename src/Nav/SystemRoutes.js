@@ -5,6 +5,9 @@ import StudentAdmission from "../Pages/Student/StudentAdmission";
 import PerfomanceAnaysis from "../Pages/Student/PerfomanceAnalysis";
 import StudentProfile from "../Pages/Student/StudentProfilePage";
 import ClassList from "../Pages/Student/ClassList";
+import StudentAdmissionForm from "../components/Student/StudentAdmissionForm";
+import LoginPage from "../Pages/Welcome/LoginPage";
+import RegisterPage from "../Pages/Welcome/RegisterPage";
 
 const SystemRoutes = () => {
   return (
@@ -17,6 +20,9 @@ const SystemRoutes = () => {
         <Route path="/performance-analysis" element={<PerfomanceAnaysis />} />
         <Route path="/school-profile" element={<StudentProfile />} />
         <Route path="/class-list" element={<ClassList />} />
+        <Route path="/enroll-student" element={<StudentAdmissionForm />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
 
         {/* <Route component={NotFound} /> */}
       </Routes>

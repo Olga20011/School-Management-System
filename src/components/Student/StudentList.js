@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DropdownMenu = () => (
   <div className="btn-actions-pane-right actions-icon-btn">
@@ -40,71 +41,91 @@ const DropdownMenu = () => (
 const StudentData = [
   {
     id: 1,
-    class: "Senior.1",
+    class: "S.1 yellow",
     photo: "",
     fullName: "Victor Thompson",
-    setion: "",
-    regNo: " ",
+    section: "Day",
+    regNo: "001",
   },
   {
     id: 2,
-    class: "Senior.2",
+    class: "S.1 green",
     photo: "",
     fullName: "Mercy Johnson",
-    section: "",
-    regNo: "",
+    section: "Boarding",
+    regNo: "002",
   },
   {
     id: 3,
-    class: "Senior 3",
+    class: "S.1 blue",
     photo: "",
     fullName: "Sserwada Joseph",
-    section: "",
-    regNo: "",
+    section: "Boarding",
+    regNo: "003",
   },
 ];
 
+const buttons = ["s.1", "s.2", "s.3", "s.4", "s.5", "s.6"];
+
 const StudentList = () => {
   return (
-    <div className="card mb-3">
-      <div className="card-header-tab card-header">
-        <div className="card-header-title font-size-lg text-capitalize font-weight-normal">
-          <i className="header-icon pe-7s-repeat mr-3 text-muted opacity-6"></i>
-          Class Lists
+    <>
+      <div>
+        {buttons.map((label, index) => (
+          <button
+            key={index}
+            className="btn btn-primary"
+            style={{ margin: "5px" }}
+          >
+            {label}
+          </button>
+        ))}
+        <Link to="/enroll-student">
+          <button className="btn btn-primary" style={{ float: "right" }}>
+            Enroll student
+          </button>
+        </Link>
+      </div>
+
+      <div className="card mt-4">
+        <div className="card-header-tab card-header">
+          <div className="card-header-title font-size-lg text-capitalize font-weight-normal">
+            <i className="header-icon pe-7s-repeat mr-3 text-muted opacity-6"></i>
+            Class Lists
+          </div>
+          <DropdownMenu />
         </div>
-        <DropdownMenu />
-      </div>
-      <div
-        className="card-body mh-300 overflow-auto"
-        style={{ maxHeight: "300px" }}
-      >
-        <table className="table table-hover table-striped table-bordered">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>IDNo</th>
-              <th>Class</th>
-              <th>Photo</th>
-              <th>Full Name</th>
-              <th>Section</th>
-              <th>Reg/No.</th>
-            </tr>
-          </thead>
-          <tbody>
-            {StudentData.map((student) => (
-              <tr key={student.id}>
-                <td>{student.id}</td>
-                <td>{student.class}</td>
-                <td>{student.photo}</td>
-                <td>{student.fullName}</td>
-                <td>{student.section}</td>
-                <td>{student.regNo}</td>
+        <div
+          className="card-body mh-300 overflow-auto"
+          style={{ maxHeight: "300px" }}
+        >
+          <table className="table table-hover table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>IDNo</th>
+                <th>Class</th>
+                <th>Photo</th>
+                <th>Full Name</th>
+                <th>Section(Day/Boarding)</th>
+                <th>Reg/No.</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {StudentData.map((student) => (
+                <tr key={student.id}>
+                  <td>{student.id}</td>
+                  <td>{student.class}</td>
+                  <td>{student.photo}</td>
+                  <td>{student.fullName}</td>
+                  <td>{student.section}</td>
+                  <td>{student.regNo}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
