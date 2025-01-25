@@ -76,21 +76,21 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               basePath="/students"
             >
               <SidebarItem
-                path="/school-fees-overview"
+                path="/school-admission"
                 iconClass="pe-7s-less nav-icon"
                 label="Enrollment/Admission"
               />
 
               <SidebarItem
-                path="/school-fees-overview"
+                path="/school-profile"
                 iconClass="pe-7s-less nav-icon"
                 label="Student Profiles"
               />
 
               <SidebarItem
-                path="/school-fees-overview"
+                path="/performance-analysis"
                 iconClass="pe-7s-less nav-icon"
-                label="Performance Tracking"
+                label="Performance Analysis"
               />
             </SidebarDropdown>
 
@@ -98,7 +98,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             <SidebarDropdown
               iconClass="fa fa-building"
               label="Academic Management"
-              basePath="/classes"
+              basePath="/academic-management"
             >
               <SidebarItem
                 path="/income-new"
@@ -109,26 +109,42 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               <SidebarItem
                 path="/income-new"
                 iconClass="pe-7s-less nav-icon"
-                label="Subjects"
+                label="Subject Combinations"
               />
 
               <SidebarItem
-                path="/income-new"
+                path="/time-table"
                 iconClass="pe-7s-less nav-icon"
-                label="Class Management"
+                label="Time Table"
+              />
+              <SidebarItem
+                path="/exams"
+                iconClass="pe-7s-less nav-icon"
+                label="Exams"
               />
             </SidebarDropdown>
 
             {/* Exams */}
             <SidebarDropdown
-              iconClass="fa fa-file"
-              label="Exams"
-              basePath="/exams"
+              iconClass="fa fa-pencil-square"
+              label="Teachers"
+              basePath="/teachers"
             >
               <SidebarItem
-                path="/income-new"
+                path="/all-teachers"
                 iconClass="pe-7s-less nav-icon"
-                label="New Income"
+                label="All Teachers"
+              />
+              <SidebarItem
+                path="/enroll-teacher"
+                iconClass="pe-7s-less nav-icon"
+                label="Enroll Teacher"
+              />
+
+              <SidebarItem
+                path="/teacher-profile"
+                iconClass="pe-7s-less nav-icon"
+                label="Teacher's Profile"
               />
             </SidebarDropdown>
 

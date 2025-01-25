@@ -42,7 +42,7 @@ const StudentPopulation = () => {
       },
       colors: ["#008FFB", "#00E396", "#FEB019"],
       title: {
-        text: "Students and Teachers Attendance",
+        text: "Students Attendance",
         align: "center",
       },
       legend: {
