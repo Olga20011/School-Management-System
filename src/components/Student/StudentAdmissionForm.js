@@ -33,6 +33,7 @@ const StudentAdmissionForm = () => {
   //   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
+
     <PageContainer>
       <MainContent>
         <PageTitle
