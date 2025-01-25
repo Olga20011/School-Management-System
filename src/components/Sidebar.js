@@ -76,7 +76,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               basePath="/students"
             >
               <SidebarItem
-                path="/class-list"
+                path="/school-admission"
                 iconClass="pe-7s-less nav-icon"
                 label="Enrollment/Admission"
               />
@@ -94,37 +94,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               />
             </SidebarDropdown>
 
-            {/* Classes */}
-            <SidebarDropdown
-              iconClass="fa fa-building"
-              label="Academic Management"
-              basePath="/academic-management"
-            >
-              <SidebarItem
-                path="/income-new"
-                iconClass="pe-7s-less nav-icon"
-                label="Curriculum"
-              />
-
-              <SidebarItem
-                path="/income-new"
-                iconClass="pe-7s-less nav-icon"
-                label="Subject Combinations"
-              />
-
-              <SidebarItem
-                path="/time-table"
-                iconClass="pe-7s-less nav-icon"
-                label="Time Table"
-              />
-              <SidebarItem
-                path="/exams"
-                iconClass="pe-7s-less nav-icon"
-                label="Exams"
-              />
-            </SidebarDropdown>
-
-            {/* Exams */}
+            {/* Teachers */}
             <SidebarDropdown
               iconClass="fa fa-pencil-square"
               label="Teachers"
@@ -135,6 +105,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                 iconClass="pe-7s-less nav-icon"
                 label="All Teachers"
               />
+
               <SidebarItem
                 path="/enroll-teacher"
                 iconClass="pe-7s-less nav-icon"
@@ -144,7 +115,32 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               <SidebarItem
                 path="/teacher-profile"
                 iconClass="pe-7s-less nav-icon"
-                label="Teacher's Profile"
+                label="Teacher Profile"
+              />
+            </SidebarDropdown>
+
+            {/* Academic Management */}
+            <SidebarDropdown
+              iconClass="fa fa-building"
+              label="Academic Management"
+              basePath="/academic-management"
+            >
+              <SidebarItem
+                path="/curriculum"
+                iconClass="pe-7s-less nav-icon"
+                label="Curriculum"
+              />
+
+              <SidebarItem
+                path="/combinations"
+                iconClass="pe-7s-less nav-icon"
+                label="Subject Combinations"
+              />
+
+              <SidebarItem
+                path="/time-table"
+                iconClass="pe-7s-less nav-icon"
+                label="Time Table"
               />
             </SidebarDropdown>
 
@@ -224,11 +220,11 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               />
             </SidebarDropdown>
 
-            {/* Configurations */}
+            {/* settings */}
             <SidebarItem
               path="/settings"
               iconClass="fa fa-cog"
-              label=" System Settings"
+              label="Settings"
             />
           </ul>
         </div>
