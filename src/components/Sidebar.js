@@ -117,18 +117,34 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                 iconClass="pe-7s-less nav-icon"
                 label="Time Table"
               />
+              <SidebarItem
+                path="/exams"
+                iconClass="pe-7s-less nav-icon"
+                label="Exams"
+              />
             </SidebarDropdown>
 
             {/* Exams */}
             <SidebarDropdown
-              iconClass="fa fa-file"
-              label="Exams"
-              basePath="/exams"
+              iconClass="fa fa-pencil-square"
+              label="Teachers"
+              basePath="/teachers"
             >
               <SidebarItem
-                path="/income-new"
+                path="/all-teachers"
                 iconClass="pe-7s-less nav-icon"
-                label="New Income"
+                label="All Teachers"
+              />
+              <SidebarItem
+                path="/enroll-teacher"
+                iconClass="pe-7s-less nav-icon"
+                label="Enroll Teacher"
+              />
+
+              <SidebarItem
+                path="/teacher-profile"
+                iconClass="pe-7s-less nav-icon"
+                label="Teacher's Profile"
               />
             </SidebarDropdown>
 

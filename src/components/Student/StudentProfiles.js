@@ -58,9 +58,9 @@ const StudentProfiles = () => {
         <div className="text-center mb-4">
           <div className="position-relative d-inline-block">
             <img
-              src={student.profilePicture}
+              src=""
               alt="Profile"
-              className="rounded-circle img-thumbnail"
+              className=" img-thumbnail"
               style={{ width: "300px", height: "300px" }}
             />
 

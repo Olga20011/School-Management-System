@@ -1,42 +1,24 @@
-import React, { useReducer } from "react";
+import React from "react";
 import TextInput from "../Common/TextInput";
 
-const StudentAdmissionForm = () => {
-  //   const reducer = (state, action) => {
-  //     switch (action.type) {
-  //       case "tag":
-  //         if (action.value.value === "add") {
-  //           openSettings("Create New Tag", "NewTag");
-  //           return { ...state };
-  //         }
-  //         return { ...state, [action.type]: action.value };
-  //       case "payee":
-  //         if (action.value.value === "add") {
-  //           openSettings("Create New Vendor", "NewVendor");
-  //           return { ...state };
-  //         }
-  //         return { ...state, [action.type]: action.value };
-  //       case "RESET":
-  //         return {
-  //           ...state,
-  //           amount: initialState.amount,
-  //           description: initialState.description,
-  //         };
-  //       default:
-  //         return { ...state, [action.type]: action.value };
-  //     }
-  //   };
-  //   const [state, dispatch] = useReducer(reducer, initialState);
-
+const NewTeacher = () => {
   return (
     <div className="card mb-3">
       <div className="card-body">
         {/* {currentNotify} */}
         <form method="post" onSubmit="">
           {/* <RenderExpenseAccount /> */}
+          <div className="position-relative d-inline-block">
+            <img
+              src=""
+              alt="Profile"
+              className="img-thumbnail"
+              style={{ width: "300px", height: "300px" }}
+            />
+          </div>
           <div className="row mb-4">
             <div className="col-md-6">
-              <h3 className="mb-3">1.Personal Information</h3>
+              <h3 className="mb-3">1. Personal Information</h3>
               <TextInput
                 type="text"
                 label="Full Name"
@@ -104,11 +86,11 @@ const StudentAdmissionForm = () => {
             </div>
 
             <div className="col-md-6">
-              <h3 className="mb-3">2. Parental/Guardian Information</h3>
+              <h3 className="mb-3">2. Proffessional Information</h3>
               <TextInput
                 type="text"
-                label="Primary Guardian Name"
-                placeholder="Primary Guardian Name"
+                label="Role/Title"
+                placeholder="Role/Title"
                 leftIcon="fa fa-user"
                 value=""
                 required
@@ -116,8 +98,8 @@ const StudentAdmissionForm = () => {
 
               <TextInput
                 type="text"
-                label="Relationship to Student"
-                placeholder="Relationship to Student"
+                label="Subjects Taught"
+                placeholder="Subjects taught"
                 leftIcon="fa fa-user"
                 value=""
                 required
@@ -125,8 +107,8 @@ const StudentAdmissionForm = () => {
 
               <TextInput
                 type="tel"
-                label="Phone Number"
-                placeholder="Phone Number"
+                label="Classes Assigned"
+                placeholder="Classes assigned"
                 leftIcon="fa fa-phone"
                 value=""
                 required
@@ -134,8 +116,17 @@ const StudentAdmissionForm = () => {
 
               <TextInput
                 type="text"
-                label="Email Address"
-                placeholder="Email Address"
+                label="Department"
+                placeholder="Department"
+                leftIcon="fa fa-envelope"
+                value=""
+                required
+              />
+
+              <TextInput
+                type="text"
+                label="Qualification"
+                placeholder="Qualifications"
                 leftIcon="fa fa-envelope"
                 value=""
                 required
@@ -143,87 +134,84 @@ const StudentAdmissionForm = () => {
             </div>
           </div>
 
-          <div className="row mb-4">
-            <div className="col-md-6">
-              <h3 className="mb-3">3. Educational Information</h3>
+          <div className="row">
+            <div className="col-6">
+              <h3 className="mb-3">3. Employment Information</h3>
               <TextInput
-                type="text"
-                label="Grade/Class/Level"
-                placeholder="Grade/Class/Level"
-                leftIcon="fa fa-graduation-cap "
+                type="date"
+                label="Date of Hire"
+                placeholder="Date of Hire"
+                leftIcon="fa fa-credit-card"
+                value=""
+                // onChange={(e) =>
+                //   dispatch({ type: "amount", value: e.target.value })
+                // }
+                required
+              />
+
+              <TextInput
+                label="Employment Type"
+                placeholder="Employment Type"
+                leftIcon="fa fa-transgender"
                 value=""
                 required
               />
 
               <TextInput
-                type="text"
-                label="Previous School Attended"
-                placeholder="Previous School Attended"
-                leftIcon="fa fa-home"
+                label="Salary Information"
+                placeholder="Salary Information"
+                leftIcon="fa fa-transgender"
+                value=""
+                required
+              />
+
+              <TextInput
+                label="Work Schedule"
+                placeholder="Work Schedule"
+                leftIcon="fa fa-transgender"
                 value=""
                 required
               />
             </div>
 
-            <div className="col-md-6">
-              <h3 className="mb-3">4. Extra- Curricular Interests</h3>
+            <div className="col-6">
+              <h3 className="mb-3">3. Additional Information</h3>
               <TextInput
                 type="text"
-                label="Sports"
-                placeholder="Sports"
-                leftIcon="fa fa-futbol"
+                label="Skills and Interests"
+                placeholder="Skills and INterests"
+                leftIcon="fa fa-credit-card"
+                value=""
+                // onChange={(e) =>
+                //   dispatch({ type: "amount", value: e.target.value })
+                // }
+                required
+              />
+
+              <TextInput
+                label="Clubs or Committees"
+                placeholder="Clubs or Committees"
+                leftIcon="fa fa-transgender"
                 value=""
                 required
               />
 
               <TextInput
-                type="text"
-                label="Clubs/Societies"
-                placeholder="Clubs/Societies"
-                leftIcon="fa fa-users"
+                label="Documents"
+                placeholder="National ID, Passport"
+                leftIcon="fa fa-transgender"
+                value=""
+                required
+              />
+
+              <TextInput
+                placeholder="Education Certificates"
+                leftIcon="fa fa-transgender"
                 value=""
                 required
               />
             </div>
           </div>
-
-          <h3 className="mb-3">5. Medical Information</h3>
-          <TextInput
-            type="text"
-            label="Known Allergies"
-            placeholder="Known Allergies"
-            leftIcon="fa fa-bug"
-            value=""
-            required
-          />
-
-          <TextInput
-            type="text"
-            label="Ongoing Medical Conditions"
-            placeholder="Ongoing Medical Conditions"
-            leftIcon="fa fa-thermometer-full"
-            value=""
-            required
-          />
-
-          <h3 className="mb-3">6. Consent Forms</h3>
-          <TextInput
-            className="form-check-label"
-            type="text"
-            label="I give consent for emergency medical treatment"
-            leftIcon="fa fa-hashtag"
-            value=""
-            required
-          />
-
-          <TextInput
-            className="form-check-label"
-            type="text"
-            label="I give consent to use my child's image for promotional purposes"
-            leftIcon="fa fa-hashtag"
-            value=""
-            required
-          />
 
           <div className="row">&nbsp;</div>
           <div className="form-group row">
@@ -244,4 +232,4 @@ const StudentAdmissionForm = () => {
   );
 };
 
-export default StudentAdmissionForm;
+export default NewTeacher;
